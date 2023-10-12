@@ -25,12 +25,12 @@ class Panagram
 			if(newArr[i]!=1)
 			{
 				flag=false;
-				System.out.println("Not An Anagram");
+				System.out.println("Not An Panagram");
 				break;
 			}
 		}
 
 		if(flag)
-			System.out.println("Anagram");
+			System.out.println("Panagram");
 	}
 }
