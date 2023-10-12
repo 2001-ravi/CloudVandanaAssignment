@@ -5,7 +5,7 @@ class Panagram
 	{
 		Scanner scn=new Scanner(System.in);
 		System.out.println("Enter a string:");
-		String s=scn.next();
+		String s=scn.nextLine();
 		s=s.toLowerCase();
 		boolean flag=true;
 		int[] newArr=new int[26];
@@ -14,6 +14,8 @@ class Panagram
 		for(int i=0;i<charArr.length;i++)
 		{
 			char ch=charArr[i];
+			if(ch==' ')
+				continue;
 			int index=ch-'a';
 			newArr[index]=1;
 		}
