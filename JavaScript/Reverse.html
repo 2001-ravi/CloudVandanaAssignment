@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reverse String</title>
+</head>
+<body>
+<h1 id="display"></h1>
+
+<!-- Script Code -->
+<script>
+	let s=prompt("enter a string");
+	let result="";
+	function reverse()
+	{
+		let j=0,i=0;
+		while(i<s.length)
+		{
+			while(j<s.length)
+			{
+				if(s.charAt(j)!=' ')
+				{
+					j++;
+				}
+				else
+				{
+					break;
+				}
+			}
+			let dummy="";
+			while(i<j)
+			{
+				dummy+=s.charAt(i);
+				i++;
+			}
+			let dummy2="";
+			for(let k=s.length-1;k>=0;k--)
+			{
+				dummy2+=dummy.charAt(k);
+			}
+			
+			result=result+dummy2+" ";
+			j++;
+			i=j;
+		}
+		console.log(result);
+	}
+	reverse();
+	document.getElementById("display").innerText=result;
+</script>
+</body>
+</html>
